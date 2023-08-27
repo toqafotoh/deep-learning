@@ -34,6 +34,6 @@ model.add(Dense(1))
 
 # Compile the model
 model.compile(loss='mean_squared_error',optimizer='adam')
-
+model.fit(predictors,target)
 # Verify that model contains information from compiling
 print("Loss function: " + model.loss)
