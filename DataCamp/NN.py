@@ -341,6 +341,26 @@ plt.show()
 
 #-----------------------------------------------------
 
+# Create the model: model
+model = Sequential()
 
+# Add the first hidden layer
+model.add(Dense(50,activation='relu', input_shape=(784,)))
+
+# Add the second hidden layer
+model.add(Dense(50,activation='relu'))
+
+# Add the output layer
+model.add(Dense(10,activation='softmax'))
+
+
+# Compile the model
+model.compile(loss='categorical_crossentropy',metrics=['accuracy'],optimizer='adam')
+
+# Fit the model
+model.fit(X,y,validation_split=0.3, epochs=10)
+
+
+#_---------------------------------------------------------------
 
 
